@@ -1,0 +1,13 @@
+# Swift / SwiftPM
+.build/
+.swiftpm/
+macos/.build/
+*.dSYM/
+
+# Packaging output from scripts/build-app.sh and scripts/release.sh
+build/
+dist/
+*.zip
+
+# macOS
+.DS_Store

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-07T16:00:00Z",
+  "ok": false,
+  "providers": [
+    {
+      "provider": "codex",
+      "status": "ok",
+      "plan": "pro",
+      "source": "codex-app-server",
+      "fetched_at": "2026-08-07T16:00:00Z",
+      "stale": false,
+      "windows": [
+        {
+          "key": "five_hour",
+          "label": "5h",
+          "window_minutes": 300,
+          "used_percent": 45,
+          "remaining_percent": 55,
+          "resets_at": "2026-08-07T18:00:00Z",
+          "resets_in_seconds": 7200
+        },
+        {
+          "key": "weekly",
+          "label": "7d",
+          "window_minutes": 10080,
+          "used_percent": 88,
+          "remaining_percent": 12,
+          "resets_at": "2026-08-10T16:00:00Z",
+          "resets_in_seconds": 259200
+        }
+      ],
+      "credits": {
+        "has_credits": false,
+        "unlimited": false,
+        "balance": null
+      },
+      "notes": [
+        "secondary window not reported by upstream"
+      ],
+      "error": null
+    },
+    {
+      "provider": "claude",
+      "status": "rate_limited",
+      "plan": "max",
+      "source": "anthropic-oauth-usage",
+      "fetched_at": "2026-08-07T16:00:00Z",
+      "stale": true,
+      "windows": [
+        {
+          "key": "five_hour",
+          "label": "5h",
+          "window_minutes": 300,
+          "used_percent": 27,
+          "remaining_percent": 73,
+          "resets_at": "2026-08-07T21:00:00Z",
+          "resets_in_seconds": 18000
+        }
+      ],
+      "credits": null,
+      "notes": [
+        "showing cached data from 120s ago"
+      ],
+      "error": {
+        "code": "rate_limited",
+        "message": "usage endpoint rate limited"
+      }
+    }
+  ],
+  "tightest": {
+    "provider": "codex",
+    "window_key": "weekly",
+    "remaining_percent": 12,
+    "resets_at": "2026-08-10T16:00:00Z"
+  }
+}
